@@ -1,0 +1,283 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-image: url("images/background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+}
+
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+
+    position: relative;
+}
+
+/* LOGO */
+.logo img {
+    height: 45px;
+}
+
+
+/* EXTRA SMALL DEVICES */
+@media(max-width:500px) {
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    .logo img {
+        height: 40px;
+    }
+}
+
+/* end navbar */
+
+
+
+
+
+
+/* COIN SELECTOR */
+.coin-selector {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+}
+
+/* coin logo */
+.coin-icon {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+/* coin name */
+.coin-name {
+    font-size: 22px;
+    font-weight: bold;
+    color: #000;
+}
+
+/* dropdown button */
+.dropdown-btn {
+    background: red;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    font-size: 24px;   /* 🔥 increase this */
+    font-weight: bold; /* makes it thicker */
+}
+
+/* dropdown menu */
+.coin-dropdown {
+    position: absolute;
+    top: 100%;
+    margin-top: 10px;
+    right: 0;
+
+    background: #fff;
+    width: 150px;
+    border-radius: 10px;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+
+    display: none;
+
+    z-index: 999999; /* 🔥 SUPER HIGH */
+}
+/* each option */
+.coin-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.coin-option img {
+    width: 25px;
+    height: 25px;
+}
+
+.coin-option:hover {
+    background: #f2f2f2;
+}
+
+/* show dropdown */
+.coin-dropdown.active {
+    display: block;
+}
+/* end of coin code  */
+
+
+
+
+
+
+
+/* buy section */
+
+.buy-section {
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 50px;
+}
+
+.title-image {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.title-image img {
+    max-width: 250px;
+    width: 100%;
+    height: auto;
+}
+
+.buy-card {
+    position: relative;
+    max-width: 400px;
+    margin: 30px auto;
+    padding: 30px 25px;
+    border: 2px solid #4b004b;
+    border-radius: 25px;
+
+    background-image: url("images/Boxes.png");
+    background-size: cover;       /* image fills the box */
+    background-position: center;  /* center the image */
+    background-repeat: no-repeat;
+
+    overflow: hidden; /* keeps image inside rounded corners */
+}
+
+.card-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    opacity: 0.2;
+    pointer-events: none;
+}
+
+.block {
+    position: relative;
+    z-index: 2;
+    text-align: left;
+}
+
+.label {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.red {
+    color: red;
+}
+
+#amountDisplay {
+    width: 100%;
+    font-size: 50px;
+    font-weight: 900;
+    border: none;
+    outline: none;
+    background: transparent;
+    margin-top: 5px;
+}
+
+.block h3 {
+    font-size: 28px;
+    font-weight: 900;
+}
+
+.amount-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.amount-buttons button {
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: 1px solid #000;
+    background: #eee;
+    cursor: pointer;
+}
+
+.amount-buttons button:hover {
+    background: #ddd;
+}
+
+hr {
+    margin: 20px 0;
+    border: 1px solid #4b004b;
+}
+
+@media(max-width:500px) {
+    #amountDisplay {
+        font-size: 40px;
+    }
+
+    .title {
+        font-size: 30px;
+    }
+}
+
+
+.amount-input{
+    display:flex;
+    align-items:center;
+    gap:5px;
+}
+
+.dollar{
+    font-size:50px;
+    font-weight:900;
+}
+
+/* end of buy section */
+
+
+
+
+.continue-btn img{
+    width:100%;
+    max-width:250px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.continue-btn img:hover{
+    transform:scale(1.05);
+}
+
+/* Terms Image */
+
+.terms img{
+    width:100%;
+    max-width:260px;
+    margin-top:20px;
+}
