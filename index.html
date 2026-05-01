@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inana Fund Raising </title>
+
+    <!-- LINK CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="main-content">
+
+        <!-- navbar -->
+        <nav class="navbar" data-aos="fade-down">
+
+            <!-- LOGO -->
+            <div class="logo" data-aos="fade-right" data-aos-delay="100">
+                <img src="images/Logo.png" alt="Logo">
+            </div>
+
+            <!-- COIN SELECTOR -->
+            <div class="coin-selector" data-aos="fade-left" data-aos-delay="200">
+
+                <img src="images/usdt logo.png" alt="USDT" class="coin-icon" id="coinIcon">
+
+                <span class="coin-name" id="coinName">USDT</span>
+
+                <div class="dropdown-btn" onclick="toggleDropdown()">
+                    &#94;
+                </div>
+
+                <!-- DROPDOWN -->
+                <div class="coin-dropdown" id="coinDropdown">
+
+                    <div class="coin-option" onclick="selectCoin('USDT','images/usdt logo.png')" data-aos="fade-up"
+                        data-aos-delay="100">
+                        <img src="images/usdt logo.png"> USDT
+                    </div>
+
+                    <div class="coin-option" onclick="selectCoin('BTC','images/Btc logo.png')" data-aos="fade-up"
+                        data-aos-delay="150">
+                        <img src="images/Btc logo.png"> BTC
+                    </div>
+
+                    <div class="coin-option" onclick="selectCoin('BNB','images/BNB logo.png')" data-aos="fade-up"
+                        data-aos-delay="200">
+                        <img src="images/BNB logo.png"> BNB
+                    </div>
+
+                    <div class="coin-option" onclick="selectCoin('NGN','images/eth.png')" data-aos="fade-up"
+                        data-aos-delay="250">
+                        <img src="images/eth.png"> NGN
+                    </div>
+
+                    <div class="coin-option" onclick="selectCoin('DOGE','images/doge logo.png')" data-aos="fade-up"
+                        data-aos-delay="300">
+                        <img src="images/doge logo.png"> DOGE
+                    </div>
+
+                </div>
+
+            </div>
+
+        </nav>
+    </div>
+    <!-- end of navbar -->
+
+
+
+
+    <section class="buy-section">
+
+        <h1 class="title">
+            <!-- IMAGE TITLE -->
+            <div class="title-image">
+                <img id="buyTitleImage" src="images/buy Doge.png" alt="Buy with USDT">
+            </div>
+        </h1>
+
+        <div class="buy-card">
+
+            <!-- OPTIONAL BACKGROUND IMAGE -->
+            <!-- <img src="images/card-bg.png" class="card-bg" alt=""> -->
+
+            <!-- MIN AMOUNT -->
+            <div class="block">
+                <p class="label red">Min. Amount:</p>
+
+                <div class="amount-input">
+                    <span class="dollar">$</span>
+                    <input type="number" id="amountDisplay" value="50" min="50" oninput="updateFromInput()">
+                </div>
+
+                <div class="amount-buttons">
+                    <button onclick="setAmount(50)">$50</button>
+                    <button onclick="setAmount(150)">$150</button>
+                    <button onclick="setAmount(500)">$500</button>
+                    <button onclick="setAmount(2000)">$2,000</button>
+                </div>
+            </div>
+
+            <hr>
+
+            <!-- BUY PRICE -->
+            <div class="block">
+                <p class="label red">Buying Price:</p>
+                <h3>$0.005 <span>per Inana</span></h3>
+            </div>
+
+            <hr>
+
+            <!-- QUANTITY -->
+            <div class="block">
+                <p class="label red">QTY.</p>
+                <h2 id="qtyDisplay">10,000pcs</h2>
+            </div>
+
+        </div>
+
+
+
+        <!-- Continue Button Image -->
+        <a href="">
+            <div class="continue-btn">
+                <img src="images/pay now.png" alt="Continue">
+            </div>
+        </a>
+
+        <!-- Terms Image -->
+        <div class="terms">
+            <img src="images/Agree.png" alt="Terms and Conditions">
+        </div>
+
+    </section>
+
+
+
+    <script src="buy.js"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+    </script>
+
+</body>
+
+</html>
